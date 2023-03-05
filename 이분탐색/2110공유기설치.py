@@ -9,3 +9,4 @@ end=n
 while start<=end:
     mid=(start+end)//2
     if xlist[mid]
+    print(bin(int(input(), 8)[2:]))
