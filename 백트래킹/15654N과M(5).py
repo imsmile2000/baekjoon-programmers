@@ -6,8 +6,9 @@ def dfs(depth,n,m):
     if len(answer)==m:
         print(*answer)
         return
-    for i in range(depth,n):
-        answer.append(nlist[i])
-        dfs(i,n,m) #비내림차순
-        answer.pop()
+    for i in range(n):
+        if nlist[i] not in answer:#중복방지
+            answer.append(nlist[i])
+            dfs(depth+1,n,m)
+            answer.pop()
 dfs(0,n,m)

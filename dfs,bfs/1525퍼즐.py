@@ -13,7 +13,7 @@ def bfs():
         graph_to_str=queue.popleft()
         idx=graph_to_str.index('0') # 빈칸의 인덱스 찾기(문자열에서)
         count=visited[graph_to_str]
-        if graph_to_str=='123456780': #정리된 상태가 되면 
+        if graph_to_str=='123456780': #정리된 상태가 되면   
             return count #종료
         x=idx//3 # 빈칸의 행    
         y=idx%3 # 빈칸의 열
@@ -35,7 +35,6 @@ def bfs():
                 visited[new_graph_to_str]=count # 방문처리(그 동안의 이동 횟수)
                 queue.append(new_graph_to_str) 
     return -1
-
 print(bfs())
 
 
