@@ -10,3 +10,4 @@ for i in range(t):
     else:
         answer=h*100+(n//h)
     print(answer)
+
